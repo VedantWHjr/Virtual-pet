@@ -1,12 +1,12 @@
 //Create variables here
-var dog, happyDog, database, foodS, foodStock;
+var dog, dogImg, happyDog, happDogImg, database, foodS, foodStock;
 
 
 function preload()
 {
   //load images here
-  dog = loadImage("dogImg.png");
-  happyDog = loadImage("dogImg1.png");
+  dogImg = loadImage("dogImg.png");
+  happyDogImg = loadImage("dogImg1.png");
 }
 
 function setup() {
@@ -28,9 +28,10 @@ function draw() {
   //add styles here
   if(keyWentDown(UP_ARROW)){
     writeStock(foodS);
-    dog.addImage(happyDog);
+    dog.image(dogImg);
+    dog.addImage(happyDogImg);
   }
-
+  
   drawSprites();
   textSize(30);
   fill("purple");
